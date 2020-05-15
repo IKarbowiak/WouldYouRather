@@ -2,7 +2,7 @@ let users = {
   sarahedo: {
     id: 'sarahedo',
     name: 'Sarah Edo',
-    avatarURL: ,
+    avatarURL: "https://www.wyszczekany.pl/wp-content/uploads/2017/07/Labrador-charakterystyka.jpg",
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionTwo',
@@ -14,7 +14,7 @@ let users = {
   tylermcginnis: {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    avatarURL: ,
+    avatarURL: "https://ocdn.eu/pulscms-transforms/1/-AwktkpTURBXy9hZGRhZDUxZmJhN2FmYTk5Zjg1ZDVlNjkxMDE3YTNmMS5qcGeRkwXNAyDNAlg",
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +24,7 @@ let users = {
   johndoe: {
     id: 'johndoe',
     name: 'John Doe',
-    avatarURL: ,
+    avatarURL: "https://zielonyogrodek.pl/i/images/4/5/6/d2FjPTE4MDB4MS4zMzM=_src_81456-Siberian-Husky-fot.-Riley-Sullivan---Unsplash.jpg",
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
