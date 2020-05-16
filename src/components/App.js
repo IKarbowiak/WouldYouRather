@@ -1,28 +1,55 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LoadingBar from 'react-redux-loading'
 
 import {handleInitialData} from '../actions/shared'
+// import {setLoggedUser} from '../actions/loggedUser'
 import LoginWindow from './LoginWindow'
+import Dashboard from './Dashboard'
 
 
  class App extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.dispatch(handleInitialData())
   }
   render() {
-    const {loggedUser, users, questions} = this.props
+    const {loggedUser, loading} = this.props
+    console.log("loggedUser", loggedUser)
+    console.log("loading", loading)
 
     if (!loggedUser) {
-      return <LoginWindow />
+      return (
+        <div>
+          <LoadingBar />
+          {this.props.loading === true 
+            ? null
+            : <LoginWindow />
+          }
+        </div>
+      )
     }
     
     return (
       <div className="App">
-        Welcome
+        <LoadingBar />
+        <div>
+          {this.props.loading === true 
+            ? null
+            : <Dashboard />
+          }
+        </div>
       </div>
     );
   }
 }
 
-export default connect()(App)
+
+function mapStateToProps({questions, loggedUser}) {
+  return {
+    loading: Object.keys(questions).length === 0,
+    loggedUser
+  }
+}
+
+export default connect(mapStateToProps)(App)

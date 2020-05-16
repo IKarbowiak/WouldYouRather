@@ -21,3 +21,20 @@ code {
 .log-in {
   margin: 1%;
 }
+
+.dashboard {
+  margin: 1% 25%;
+}
+
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0px 0px 5px 5px;
+  padding: 10px;
+}
+
+.question {
+  width: '10rem';
+  margin-top: 2% !important;
+}
