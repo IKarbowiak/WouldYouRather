@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.game-image {
+  width: 15% !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.log-in {
+  margin: 1%;
+}
