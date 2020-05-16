@@ -10,7 +10,7 @@ import Dashboard from './Dashboard'
 
 
  class App extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.dispatch(handleInitialData())
   }
   render() {

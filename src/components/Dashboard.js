@@ -4,6 +4,7 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 
 import Question from './Question'
+import QuestionPool from './QuestionPool'
 
 
 class Dashboard extends Component {
@@ -16,6 +17,7 @@ class Dashboard extends Component {
             {unanswered.map(q => (
                 <div key={q.id}>
                   <Question id={q.id}/>
+                  <QuestionPool id={q.id} />
                 </div>
               ))}
           </Tab>
@@ -23,6 +25,7 @@ class Dashboard extends Component {
             {answered.map(q => (
                 <div key={q.id}>
                    <Question id={q.id}/>
+                   <QuestionPool id={q.id} />
                 </div>
               ))}
           </Tab>

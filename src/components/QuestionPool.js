@@ -1,16 +1,18 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+import Results from './Results'
+import Pool from './Pool'
 
 
-class Question extends Component {
-  render() {
-    const {question, users} = this.props
+class QuestionPool extends Component {
+  render () {
+    const {question, users, loggedUser, id} = this.props
     const author = users[question.author]
+    const showResults = question.id in users[loggedUser].answers
 
     return (
-      <Card className="question">
+      <Card className="pool">
         <Card.Header>{author.name} asks:</Card.Header>
         <div className="container">
           <div className="row no-gutters">
@@ -18,13 +20,10 @@ class Question extends Component {
               <Card.Img variant="top" src={author.avatarURL} className="avatar"/>
             </div>
             <div className="col-md-8">
-            <Card.Body className="card-block px-2">
-              <Card.Title>Would you rather?</Card.Title>
-              <Card.Text>
-                ...{question.optionOne.text}...
-              </Card.Text>
-              <Button variant="outline-info">View poll</Button>
-             </Card.Body>
+              {showResults === true
+                ? <Results id={id} />
+                : <Pool id={id} />
+              }
             </div>
           </div>
         </div>
@@ -33,12 +32,14 @@ class Question extends Component {
   }
 }
 
-function mapStateToProps({questions, users}, {id}) {
+function mapStateToProps({questions, users, loggedUser}, {id}) {
   const question = questions[id]
   return {
     question,
     users,
+    loggedUser,
+    id,
   }
 }
 
-export default connect(mapStateToProps)(Question)
+export default connect(mapStateToProps)(QuestionPool)
