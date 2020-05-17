@@ -17,7 +17,6 @@ class Dashboard extends Component {
             {unanswered.map(q => (
                 <div key={q.id}>
                   <Question id={q.id}/>
-                  <QuestionPool id={q.id} />
                 </div>
               ))}
           </Tab>
@@ -25,7 +24,6 @@ class Dashboard extends Component {
             {answered.map(q => (
                 <div key={q.id}>
                    <Question id={q.id}/>
-                   <QuestionPool id={q.id} />
                 </div>
               ))}
           </Tab>

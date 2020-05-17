@@ -37,6 +37,7 @@ class NewQuestion extends Component {
       optionOne: "",
       optionTwo: "",
     })
+    this.props.history.push("/")
   }
 
   render() {

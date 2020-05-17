@@ -2,9 +2,15 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import {withRouter} from 'react-router-dom'
 
 
 class Question extends Component {
+  toPool = (event, id) => {
+    event.preventDefault()
+    this.props.history.push(`/questions/${id}`)
+  }
+
   render() {
     const {question, users} = this.props
     const author = users[question.author]
@@ -23,7 +29,12 @@ class Question extends Component {
               <Card.Text>
                 ...{question.optionOne.text}...
               </Card.Text>
-              <Button variant="outline-info">View poll</Button>
+              <Button
+                variant="outline-info"
+                onClick={e => this.toPool(e, question.id)}
+              >
+                View poll
+              </Button>
              </Card.Body>
             </div>
           </div>
@@ -41,4 +52,4 @@ function mapStateToProps({questions, users}, {id}) {
   }
 }
 
-export default connect(mapStateToProps)(Question)
+export default withRouter(connect(mapStateToProps)(Question))

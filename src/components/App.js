@@ -11,6 +11,7 @@ import LoginWindow from './LoginWindow'
 import Dashboard from './Dashboard'
 import LeaderBoard from './LeaderBoard'
 import NewQuestion from './NewQuestion'
+import QuestionPool from './QuestionPool'
 
 
  class App extends Component {
@@ -45,6 +46,7 @@ import NewQuestion from './NewQuestion'
                 <Route path="/" exact component={Dashboard}/>
                 <Route path="/add" component={NewQuestion}/>
                 <Route path="/leaderboard" component={LeaderBoard}/>
+                <Route path="/questions/:id" component={QuestionPool}/>
               </div>
           }
         </div>
