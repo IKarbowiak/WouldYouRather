@@ -38,3 +38,11 @@ code {
   width: '10rem';
   margin-top: 2% !important;
 }
+
+.leaders-board {
+  margin: 1% 25%;
+}
+
+.new-question {
+  margin: 1% 30%;
+}

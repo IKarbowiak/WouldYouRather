@@ -7,6 +7,8 @@ import {handleInitialData} from '../actions/shared'
 // import {setLoggedUser} from '../actions/loggedUser'
 import LoginWindow from './LoginWindow'
 import Dashboard from './Dashboard'
+import LeaderBoard from './LeaderBoard'
+import NewQuestion from './NewQuestion'
 
 
  class App extends Component {
@@ -36,7 +38,7 @@ import Dashboard from './Dashboard'
         <div>
           {this.props.loading === true 
             ? null
-            : <Dashboard />
+            : <NewQuestion />
           }
         </div>
       </div>
