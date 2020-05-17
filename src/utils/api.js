@@ -4,8 +4,8 @@ export function saveQuestion(question) {
   return _saveQuestion(question)
 }
 
-export function saveQuestionAnswer(answer_info) {
-  return _saveQuestionAnswer(answer_info)
+export function saveQuestionAnswer(answerInfo) {
+  return _saveQuestionAnswer(answerInfo)
 }
 
 export function getInitialData() {

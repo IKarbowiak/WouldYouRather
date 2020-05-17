@@ -13,13 +13,13 @@ class Results extends Component {
     return (
       <Card.Body className="card-block px-2">
         <h4>Results</h4>
-        <div className={`alert ${optionOneVotes.includes(loggedUser) ? 'alert-success' : 'alert-dark'}`}>
+        <div className={`alert ${optionOneVotes.includes(loggedUser) ? 'alert-success' : 'border border-secondary'}`}>
         <p>
             Would you rather {question.optionOne.text}?
           </p>
           {optionOneVotes.length} out of {numOfVotes}
         </div>
-        <div className={`alert ${optionTwoVotes.includes(loggedUser) ? 'alert-success' : 'alert-dark'}`}>
+        <div className={`alert ${optionTwoVotes.includes(loggedUser) ? 'alert-success' : 'border border-secondary'}`}>
         <p>
             Would you rather {question.optionTwo.text}?
           </p>

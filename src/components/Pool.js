@@ -3,25 +3,28 @@ import {connect} from 'react-redux'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
+import {handleSaveAnswer} from '../actions/questions'
+
 
 class Pool extends Component {
   state = {
     answer: "optionOne"
   }
+
   onChange = (event) => {
     event.preventDefault()
     this.setState({
       answer: event.target.value
     })
   }
+
   onSubmit = (event) => {
     event.preventDefault()
     const {answer} = this.state
-    const {loggedUser} = this.props
-    console.log('answer', answer)
-    console.log('loggedU', loggedUser)
-
+    const {dispatch, question} = this.props
+    dispatch(handleSaveAnswer(question.id, answer))
   }
+
   render() {
     const {question} = this.props
     return (
@@ -53,12 +56,10 @@ class Pool extends Component {
   }
 }
 
-function mapStateToProps({questions, loggedUser}, {id}) {
+function mapStateToProps({questions}, {id}) {
   const question = questions[id]
   return {
     question,
-    loggedUser,
-    id,
   }
 }
 
