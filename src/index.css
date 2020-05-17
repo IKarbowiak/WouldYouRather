@@ -46,3 +46,26 @@ code {
 .new-question {
   margin: 1% 30%;
 }
+
+.active {
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.nav li:first-child {
+  padding-left: 0;
+}
+
+.app-navbar {
+  margin-top: 2px;
+}
+
+.log-out {
+  margin-left: 1%;
+}

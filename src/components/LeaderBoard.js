@@ -13,7 +13,7 @@ class LeaderBoard extends Component {
     return (
       <div className="leaders-board">
         {users.map(user => (
-          <Card>
+          <Card key={user.id}>
             <div className="container">
               <div className="row no-gutters">
                 <div className="col-md-3">
