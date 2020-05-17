@@ -5,7 +5,6 @@ import LoadingBar from 'react-redux-loading'
 import {Route} from 'react-router-dom'
 
 import {handleInitialData} from '../actions/shared'
-// import {setLoggedUser} from '../actions/loggedUser'
 import AppNav from './AppNav'
 import LoginWindow from './LoginWindow'
 import Dashboard from './Dashboard'
@@ -22,18 +21,6 @@ import QuestionPool from './QuestionPool'
     const {loggedUser, loading} = this.props
     console.log("loggedUser", loggedUser)
     console.log("loading", loading)
-
-    // if (!loggedUser) {
-    //   return (
-    //     <div>
-    //       <LoadingBar />
-    //       {this.props.loading === true
-    //         ? null
-    //         : <LoginWindow />
-    //       }
-    //     </div>
-    //   )
-    // }
     
     return (
       <div className="App">
@@ -42,12 +29,14 @@ import QuestionPool from './QuestionPool'
           <AppNav />
           {this.props.loading === true 
             ? null
-            : <div>
-                <Route path="/" exact component={Dashboard}/>
-                <Route path="/add" component={NewQuestion}/>
-                <Route path="/leaderboard" component={LeaderBoard}/>
-                <Route path="/questions/:id" component={QuestionPool}/>
-              </div>
+            :  loggedUser === null
+                ? <LoginWindow />
+                : <div>
+                    <Route path="/" exact component={Dashboard}/>
+                    <Route path="/add" component={NewQuestion}/>
+                    <Route path="/leaderboard" component={LeaderBoard}/>
+                    <Route path="/questions/:id" component={QuestionPool}/>
+                  </div>
           }
         </div>
       </div>

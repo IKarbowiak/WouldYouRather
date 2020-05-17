@@ -50,13 +50,21 @@ class NewQuestion extends Component {
             <Form onSubmit={this.onSubmit}>
               <Row>
                 <Col>
-                  <Form.Control value={this.state.optionOne} placeholder="Enter option one here" onChange={this.optionOneOnChange}/>
+                  <Form.Control
+                    value={this.state.optionOne}
+                    placeholder="Enter option one here"
+                    onChange={this.optionOneOnChange}
+                  />
                 </Col>
               </Row>
               or
               <Row>
                 <Col>
-                  <Form.Control value={this.state.optionTwo} placeholder="Enter option two here" onChange={this.optionTwoOnChange}/>
+                  <Form.Control
+                    value={this.state.optionTwo}
+                    placeholder="Enter option two here"
+                    onChange={this.optionTwoOnChange}
+                  />
                 </Col>
               </Row>
               <Button type="submit" variant="success">Submit</Button>
