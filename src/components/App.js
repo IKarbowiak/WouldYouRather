@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoadingBar from 'react-redux-loading'
-import {Route} from 'react-router-dom'
+import {Route, Redirect} from 'react-router-dom'
 
 import {handleInitialData} from '../actions/shared'
 import AppNav from './AppNav'
@@ -11,6 +11,7 @@ import Dashboard from './Dashboard'
 import LeaderBoard from './LeaderBoard'
 import NewQuestion from './NewQuestion'
 import QuestionPool from './QuestionPool'
+import NotFoundPage from './NotFoundPage'
 
 
  class App extends Component {
@@ -36,6 +37,8 @@ import QuestionPool from './QuestionPool'
                     <Route path="/add" component={NewQuestion}/>
                     <Route path="/leaderboard" component={LeaderBoard}/>
                     <Route path="/questions/:id" component={QuestionPool}/>
+                    <Route path="/404" component={NotFoundPage} />
+                    <Redirect to="/404" />
                   </div>
           }
         </div>
