@@ -22,7 +22,7 @@ class Results extends Component {
           </p>
           <div className="progress">
             <div
-              className="progress-bar bg-success"
+              className={`progress-bar bg-${optionOneVotes.includes(loggedUser) ? 'success' :  'secondary'}`}
               role="progressbar"
               style={{width: `${optionOnePercent}%`}}
               aria-valuenow={optionOnePercent}
@@ -34,6 +34,8 @@ class Results extends Component {
           </div>
           <div style={{textAlign: "center"}}>
             {optionOneVotes.length} out of {numOfVotes}
+            <br/>
+            {optionOneVotes.includes(loggedUser) && <span style={{fontWeight: "bold"}}>Your vote!</span>}
           </div>
         </div>
         <div className={`alert ${optionTwoVotes.includes(loggedUser) ? 'alert-success' : 'border border-secondary'}`}>
@@ -42,7 +44,7 @@ class Results extends Component {
           </p>
           <div className="progress">
             <div
-              className="progress-bar bg-secondary"
+              className={`progress-bar bg-${optionTwoVotes.includes(loggedUser) ? 'success' :  'secondary'}`}
               role="progressbar"
               style={{width: `${optionTwoPercent}%`}}
               aria-valuenow={optionTwoPercent}
@@ -54,6 +56,8 @@ class Results extends Component {
           </div>
           <div style={{textAlign: "center"}}>
             {optionTwoVotes.length} out of {numOfVotes}
+            <br/>
+            {optionTwoVotes.includes(loggedUser) && <span style={{fontWeight: "bold"}}>Your vote!</span>}
           </div>
         </div>
       </Card.Body>
