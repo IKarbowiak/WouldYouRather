@@ -17,7 +17,7 @@ class QuestionPool extends Component {
         <Card.Header>{author.name} asks:</Card.Header>
         <div className="container">
           <div className="row no-gutters">
-            <div className="col-md-4">
+            <div className="col-md-4 card-img-cont">
               <Card.Img variant="top" src={author.avatarURL} className="avatar"/>
             </div>
             <div className="col-md-8">

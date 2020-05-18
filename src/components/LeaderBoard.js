@@ -12,15 +12,20 @@ class LeaderBoard extends Component {
     console.log('props', this.props)
     return (
       <div className="leaders-board">
-        {users.map(user => (
-          <Card key={user.id}>
+        {users.map((user, index) => (
+          <Card key={user.id} className="leader">
             <div className="container">
-              <div className="row no-gutters">
-                <div className="col-md-3">
-                  <Card.Img variant="top" src={user.avatarURL} className="avatar"/>
+              <div className="row">
+                <div className="col-md-1 place-cnt">
+                  <span className="place">
+                    {index + 1}
+                  </span>
                 </div>
-                <div className="col-md-6">
-                  <h4>{user.name}</h4>
+                <div className="col-md-3 card-img-cont">
+                  <Card.Img variant="top" src={user.avatarURL} className="avatar rounded"/>
+                </div>
+                <div className="col-md-6 leader-info">
+                  <h4 className="leader-name">{user.name}</h4>
                   <Table>
                     <tbody>
                       <tr>
@@ -34,9 +39,13 @@ class LeaderBoard extends Component {
                     </tbody>
                   </Table>
                 </div>
-                <div className="col-md-3">
-                  <h4>Score</h4>
-                  {Object.keys(user.answers).length + user.questions.length}
+                <div className="col-md-2 score-cnt">
+                  <span className="score">
+                    <h4>Score</h4>
+                    <span className="p-3 mb-2 bg-warning text-dark rounded-circle">
+                      {Object.keys(user.answers).length + user.questions.length}
+                    </span>
+                  </span>
                 </div>
               </div>
             </div>

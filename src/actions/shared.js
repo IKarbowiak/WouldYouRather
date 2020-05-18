@@ -9,8 +9,6 @@ export function handleInitialData() {
   return (dispatch) => {
     dispatch(showLoading())
     return getInitialData().then(({users, questions}) => {
-    // todo: remove that after adding Router
-      dispatch(setLoggedUser("johndoe"))
       dispatch(receiveUsers(users))
       dispatch(receiveQuestions(questions))
       dispatch(hideLoading())

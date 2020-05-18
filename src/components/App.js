@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoadingBar from 'react-redux-loading'
-import {Route, Redirect} from 'react-router-dom'
+import {Route, Redirect, Switch} from 'react-router-dom'
 
 import {handleInitialData} from '../actions/shared'
 import AppNav from './AppNav'
@@ -33,12 +33,14 @@ import NotFoundPage from './NotFoundPage'
             :  loggedUser === null
                 ? <LoginWindow />
                 : <div>
+                    <Switch>
                     <Route path="/" exact component={Dashboard}/>
-                    <Route path="/add" component={NewQuestion}/>
-                    <Route path="/leaderboard" component={LeaderBoard}/>
-                    <Route path="/questions/:id" component={QuestionPool}/>
-                    <Route path="/404" component={NotFoundPage} />
-                    <Redirect to="/404" />
+                      <Route path="/add" component={NewQuestion}/>
+                      <Route path="/leaderboard" component={LeaderBoard}/>
+                      <Route path="/questions/:id" component={QuestionPool}/>
+                      <Route path="/404" component={NotFoundPage} />
+                      <Redirect to="/404" />
+                    </Switch>
                   </div>
           }
         </div>

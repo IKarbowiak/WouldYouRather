@@ -31,8 +31,8 @@ class LoginWindow extends Component {
 
     return (
       <Card className="text-center">
-        <Card.Header>Welcome to the Would You Rather game!</Card.Header>
-        <Card.Img variant="top" src="https://images-na.ssl-images-amazon.com/images/I/61qsWw4O5IL.png" className="game-image" />
+        <h2 className="welcome">Welcome to the Would You Rather game!</h2>
+        <Card.Img variant="top" src="/wouldYouRather.png" className="game-image" />
         <Card.Body>
           <Card.Title>Log in</Card.Title>
           <Card.Text>

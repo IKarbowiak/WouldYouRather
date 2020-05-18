@@ -19,23 +19,21 @@ class Question extends Component {
       <Card className="question">
         <Card.Header>{author.name} asks:</Card.Header>
         <div className="container">
-          <div className="row no-gutters">
-            <div className="col-md-4">
-              <Card.Img variant="top" src={author.avatarURL} className="avatar"/>
+          <div className="row">
+            <div className="col-md-4 card-img-cont">
+              <Card.Img variant="top" src={author.avatarURL} className="avatar rounded"/>
             </div>
             <div className="col-md-8">
-            <Card.Body className="card-block px-2">
-              <Card.Title>Would you rather?</Card.Title>
-              <Card.Text>
-                ...{question.optionOne.text}...
-              </Card.Text>
-              <Button
-                variant="outline-info"
-                onClick={e => this.toPool(e, question.id)}
-              >
-                View poll
-              </Button>
-             </Card.Body>
+                <Card.Title>Would you rather?</Card.Title>
+                <Card.Text>
+                  ...{question.optionOne.text}...
+                </Card.Text>
+                <Button
+                  variant="outline-info"
+                  onClick={e => this.toPool(e, question.id)}
+                >
+                  View poll
+                </Button>
             </div>
           </div>
         </div>
