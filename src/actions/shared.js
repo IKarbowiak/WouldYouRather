@@ -1,7 +1,6 @@
 import {getInitialData} from '../utils/api'
 import {receiveUsers} from './users'
 import {receiveQuestions} from './questions'
-import {setLoggedUser} from './loggedUser'
 import {showLoading, hideLoading} from 'react-redux-loading'
 
 

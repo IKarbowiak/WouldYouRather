@@ -4,7 +4,6 @@ import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 
 import Question from './Question'
-import QuestionPool from './QuestionPool'
 
 
 class Dashboard extends Component {

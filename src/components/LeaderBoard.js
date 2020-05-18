@@ -2,8 +2,6 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import Card from 'react-bootstrap/Card'
 import Table from 'react-bootstrap/Table'
-import ListGroup from 'react-bootstrap/ListGroup'
-import ListGroupItem from 'react-bootstrap/ListGroupItem'
 
 
 class LeaderBoard extends Component {
