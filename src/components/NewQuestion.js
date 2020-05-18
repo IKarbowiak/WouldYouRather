@@ -57,7 +57,9 @@ class NewQuestion extends Component {
                   />
                 </Col>
               </Row>
-              or
+              <div style={{textAlign: "center", margin: "1% auto"}}>
+                or
+              </div>
               <Row>
                 <Col>
                   <Form.Control
@@ -67,7 +69,9 @@ class NewQuestion extends Component {
                   />
                 </Col>
               </Row>
-              <Button type="submit" variant="success">Submit</Button>
+              <div className="new-qst-submit">
+                <Button style={{textAlign: "center"}} type="submit" variant="success">Submit</Button>
+              </div>
             </Form>
           </Card.Body>
         </Card>
