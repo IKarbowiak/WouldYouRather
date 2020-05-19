@@ -14,7 +14,7 @@ class Results extends Component {
     const optionTwoPercent = Math.round((optionTwoVotes.length / numOfVotes) * 100)
 
     return (
-      <Card.Body className="card-block px-2">
+      <Card.Body className="card-block px-2" style={{marginLeft: "1%"}}>
         <h4 style={{textAlign: "center"}}>Results</h4>
         <h6>Would you rather...</h6>
         <OptionResult

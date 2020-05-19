@@ -28,7 +28,7 @@ class Pool extends Component {
   render() {
     const {question} = this.props
     return (
-      <Card.Body className="card-block px-2">
+    <Card.Body className="card-block" style={{marginLeft: "1%"}}>
       <Card.Title>Would you rather?</Card.Title>
       <form onSubmit={this.onSubmit}>
         <input
