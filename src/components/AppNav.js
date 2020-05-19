@@ -16,7 +16,6 @@ class AppNav extends Component {
 
   render () {
     const {user} = this.props
-    console.log("user", user)
     return (
       <Navbar className="bg-light app-navbar">
         <Navbar.Collapse className="justify-content-center">

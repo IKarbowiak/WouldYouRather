@@ -12,14 +12,14 @@ class Dashboard extends Component {
     return (
       <div className="dashboard">
         <Tabs defaultActiveKey="unanswered" id="dashboard-tab">
-          <Tab eventKey="unanswered" title="Unanswered Questions" className='tab-content'>
+          <Tab eventKey="unanswered" title="Unanswered Questions" className="tab-content">
             {unanswered.map(q => (
                 <div key={q.id}>
                   <Question id={q.id}/>
                 </div>
               ))}
           </Tab>
-          <Tab eventKey="answered" title="Answered Questions" className='tab-content'>
+          <Tab eventKey="answered" title="Answered Questions" className="tab-content">
             {answered.map(q => (
                 <div key={q.id}>
                    <Question id={q.id}/>

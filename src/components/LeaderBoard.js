@@ -7,7 +7,6 @@ import Table from 'react-bootstrap/Table'
 class LeaderBoard extends Component {
   render () {
     const {users} = this.props
-    console.log('props', this.props)
     return (
       <div className="leaders-board">
         {users.map((user, index) => (

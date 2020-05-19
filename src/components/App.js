@@ -20,8 +20,6 @@ import NotFoundPage from './NotFoundPage'
   }
   render() {
     const {loggedUser, loading} = this.props
-    console.log("loggedUser", loggedUser)
-    console.log("loading", loading)
     
     return (
       <div className="App">

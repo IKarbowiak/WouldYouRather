@@ -22,7 +22,6 @@ class LoginWindow extends Component {
     const {dispatch} = this.props
     if (selectedUser !== "") {
       dispatch(setLoggedUser(selectedUser))
-      // history.back()
     }
   }
 
