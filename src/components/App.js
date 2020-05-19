@@ -26,7 +26,7 @@ import NotFoundPage from './NotFoundPage'
         <LoadingBar />
         <div>
           <AppNav />
-          {this.props.loading === true 
+          {loading === true
             ? null
             :  loggedUser === null
                 ? <LoginWindow />

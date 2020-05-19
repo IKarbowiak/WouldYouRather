@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import {Redirect} from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import Results from './Results'
 import Pool from './Pool'
@@ -8,6 +9,11 @@ import Pool from './Pool'
 class QuestionPool extends Component {
   render () {
     const {question, users, loggedUser, id} = this.props
+
+    if (question === undefined) {
+      return <Redirect to="/404" />
+    }
+
     const author = users[question.author]
     const showResults = question.id in users[loggedUser].answers
 
